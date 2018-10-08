@@ -162,13 +162,9 @@ body, ul, table, form{
 	box-shadow:0 0 20px #999;
 }
 
-.sj-book .p1,
-.sj-book .p2,
-.sj-book .p3, 
-.sj-book .p111, 
-.sj-book .p112{
+.sj-book .p1{
 	background-color:white;
-	background-image:url(../pics/book-covers.jpg) !important;
+	background-image:url(../pics/brown-bear.jpg) !important;
 }
 
 .sj-book .p1{
@@ -227,6 +223,7 @@ body, ul, table, form{
 }
 
 
+/*
 .sj-book .p2{
 	background-position:-480px 0 !important;
 }
@@ -242,6 +239,8 @@ body, ul, table, form{
 .sj-book .p112{
 	background-position:-1440px 0 !important;
 }
+*/
+
 
 .sj-book .hard{
 	width:480px;

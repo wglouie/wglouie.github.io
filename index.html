@@ -18,8 +18,6 @@
 		<div class="sj-book">
 			<div depth="5" class="hard"> <div class="side"></div> </div>
 			<div depth="5" class="hard front-side"> <div class="depth"></div> </div>
-			<div class="own-size"></div>
-			<div class="own-size even"></div>
 			<div class="hard fixed back-side p111"> <div class="depth"></div> </div>
 			<div class="hard p112"></div>
 		</div>
@@ -171,12 +169,14 @@ function loadApp() {
 		when: {
 			turning: function(e, page, view) {
 				
-				var book = $(this),
-					currentPage = book.turn('page'),
-					pages = book.turn('pages');
+				var book = $(this),								// Makes book variable 
+					currentPage = book.turn('page'),			// Gets the current page
+					pages = book.turn('pages');					// Gets the number of pages in flipbook
 
+				// If current page is greater than 3
 				if (currentPage>3 && currentPage<pages-3) {
 				
+					// Deals with first page and last page
 					if (page==1) {
 						book.turn('page', 2).turn('stop').turn('page', page);
 						e.preventDefault();
@@ -197,7 +197,7 @@ function loadApp() {
 						return;
 					}
 				}
-
+				
 				updateDepth(book, page);
 				
 				if (page>=2)
@@ -235,7 +235,8 @@ function loadApp() {
 				moveBar(true);
 
 			},
-
+			
+			// Handles when the page is done flipping
 			end: function(e, pageObj) {
 			
 				var book = $(this);

@@ -1,0 +1,10 @@
+#This package assumes you have downloaded the python and c++ sdk for Nao V6 in the folder ~/nao_developer_software
+
+cd ~/nao_developer_software/
+tar -xvzf naoqi-sdk-2.1.4.13-linux64.tar.gz
+tar -xvzf pynaoqi-python2.7-2.1.4.13-linux64.tar.gz
+echo "PYTHONPATH=${PYTHONPATH}:~/nao_developer_software/pynaoqi-python2.7-2.1.4.13-linux64" >> ~/.bashrc
+echo "LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:~/nao_developer_software/naoqi-sdk-2.1.4.13-linux64" >> ~/.bashrc
+sudo ldconfig
+sudo cp -a ~/nao_developer_software/naoqi-sdk-2.1.4.13-linux64/lib/libboost_*.so.* ~/nao_developer_software/naoqi-sdk-2.1.4.13-linux64/
+source ~/.bashrc

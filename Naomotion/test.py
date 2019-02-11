@@ -1,11 +1,11 @@
+#!/usr/bin/env python
 
 from naoqi import ALProxy
 import webbrowser
 import time
-from pynput.keyboard import Key, Controller #https://pypi.org/project/pynput/
  
 time.sleep(1)
-webbrowser.open("https://bright626816.github.io/")
+webbrowser.open("https://wglouie.github.io/")
 
 #Delay to wait for page to load
 time.sleep(5)
@@ -72,7 +72,3 @@ except BaseException, err:
 
 time.sleep(1.56)
 
-# Press and release space
-keyboard = Controller()
-keyboard.press(Key.right)
-keyboard.release(Key.right)

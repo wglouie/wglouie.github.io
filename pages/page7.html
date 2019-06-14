@@ -1,6 +1,6 @@
 <div class="book-content">
 
-<p class="capital">
+<p class="capital" style="font-size:100px;">
 Sam the snake was slithering on the ground.
 </p>
 
@@ -8,5 +8,20 @@ Sam the snake was slithering on the ground.
 	<img src="pics/SamSnake.jpg?p" style="width:350px; height:230px;">
 </p>
 
+<p id="answer" class="capital" style="font-size:100px; color:blue;"></p>
+
 </div>
+
+<script>
+var parameters = location.search.substring(1).split("&");
+
+var temp = parameters[0].split("=");
+answer = unescape(temp[1]);
+
+if (answer != '') {
+  document.getElementById("answer").innerHTML = answer;
+} 
+
+
+</script> 
 <span class="page-number">7</span>
